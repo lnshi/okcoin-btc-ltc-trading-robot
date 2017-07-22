@@ -1,0 +1,764 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="#dddddd"
+        app:contentInsetEnd="0dp"
+        app:contentInsetStart="0dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="fill_parent"
+                android:src="@drawable/bitcoin"
+                android:scaleType="fitCenter"
+                android:layout_marginStart="@dimen/small_left_right_gap"
+                android:layout_marginEnd="@dimen/small_left_right_gap"
+                android:contentDescription="@string/content_description"/>
+            <TextView
+                android:text="@string/app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/max_font_size"
+                android:textColor="#767676"
+                android:fontFamily="Roboto-Thin" />
+        </LinearLayout>
+
+    </android.support.v7.widget.Toolbar>
+
+    <ScrollView
+        android:layout_below="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#eeeeee">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/user_account_info_table"
+                android:layout_alignParentTop="true"
+                android:layout_width="fill_parent"
+                android:layout_height="88dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/medium_top_bottom_gap"
+                android:layout_marginRight="@dimen/medium_left_right_gap"
+                android:layout_marginLeft="@dimen/medium_left_right_gap"
+                android:background="@drawable/rounded_corner"
+                android:stretchColumns="1,3"
+                android:shrinkColumns="0,2">
+
+                <TableRow
+                    android:id="@+id/user_account_info_1st_row"
+                    android:layout_width="fill_parent"
+                    android:minHeight="25dp"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap">
+
+                    <TextView
+                        android:layout_height="fill_parent"
+                        android:text="@string/rmb_sum_label"
+                        android:textColor="#000000"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:id="@+id/user_account_rmb_sum_value"
+                        android:layout_height="fill_parent"
+                        android:text="@string/init_indicator"
+                        android:textColor="#808080"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/medium_left_right_gap"
+                        android:paddingEnd="@dimen/medium_left_right_gap"/>
+
+                    <TextView
+                        android:layout_height="fill_parent"
+                        android:text="@string/btc_sum_label"
+                        android:textColor="#000000"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:id="@+id/user_account_btc_sum_value"
+                        android:layout_height="fill_parent"
+                        android:text="@string/init_indicator"
+                        android:textColor="#808080"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/medium_left_right_gap"
+                        android:paddingEnd="@dimen/medium_left_right_gap"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/user_account_info_2nd_row"
+                    android:layout_width="fill_parent"
+                    android:minHeight="25dp"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap">
+
+                    <TextView
+                        android:layout_height="fill_parent"
+                        android:text="@string/rmb_avl_label"
+                        android:textColor="#000000"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:id="@+id/user_account_rmb_avl_value"
+                        android:layout_height="fill_parent"
+                        android:text="@string/init_indicator"
+                        android:textColor="#808080"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/medium_left_right_gap"
+                        android:paddingEnd="@dimen/medium_left_right_gap"/>
+
+                    <TextView
+                        android:layout_height="fill_parent"
+                        android:text="@string/btc_avl_label"
+                        android:textColor="#000000"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:id="@+id/user_account_btc_avl_value"
+                        android:layout_height="fill_parent"
+                        android:text="@string/init_indicator"
+                        android:textColor="#808080"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/medium_left_right_gap"
+                        android:paddingEnd="@dimen/medium_left_right_gap"/>
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/user_account_info_3rd_row"
+                    android:layout_width="fill_parent"
+                    android:minHeight="25dp"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap">
+
+                    <TextView
+                        android:layout_height="fill_parent"
+                        android:text="@string/rmb_frozen_label"
+                        android:textColor="#000000"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:id="@+id/user_account_rmb_frozen_value"
+                        android:layout_height="fill_parent"
+                        android:text="@string/init_indicator"
+                        android:textColor="#808080"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/medium_left_right_gap"
+                        android:paddingEnd="@dimen/medium_left_right_gap"/>
+
+                    <TextView
+                        android:layout_height="fill_parent"
+                        android:text="@string/btc_frozen_label"
+                        android:textColor="#000000"
+                        android:gravity="center_vertical"/>
+                    <TextView
+                        android:id="@+id/user_account_btc_frozen_value"
+                        android:layout_height="fill_parent"
+                        android:text="@string/init_indicator"
+                        android:textColor="#808080"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/medium_left_right_gap"
+                        android:paddingEnd="@dimen/medium_left_right_gap"/>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:id="@+id/btc_current_price_container"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_below="@+id/user_account_info_table"
+                android:paddingStart="@dimen/medium_left_right_gap"
+                android:paddingEnd="@dimen/medium_left_right_gap"
+                android:layout_marginTop="@dimen/medium_top_bottom_gap"
+                android:layout_marginStart="@dimen/medium_left_right_gap"
+                android:layout_marginEnd="@dimen/medium_left_right_gap"
+                android:background="@drawable/rounded_corner">
+
+                <TextView
+                    android:layout_height="fill_parent"
+                    android:layout_width="wrap_content"
+                    android:text="@string/btc_current_price_label"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/btc_current_price"
+                    android:layout_height="fill_parent"
+                    android:layout_width="wrap_content"
+                    android:text="@string/init_indicator"
+                    android:textColor="#808080"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/medium_left_right_gap"
+                    android:paddingEnd="@dimen/medium_left_right_gap"/>
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+                    <TextView
+                        android:id="@+id/query_current_btc_price_times"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:text="@string/init_indicator"
+                        android:textColor="#8abd00"
+                        android:gravity="center_vertical"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/medium_left_right_gap"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/total_profit_info_container"
+                android:layout_below="@+id/btc_current_price_container"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="@dimen/medium_top_bottom_gap"
+                android:layout_marginRight="@dimen/medium_left_right_gap"
+                android:layout_marginLeft="@dimen/medium_left_right_gap"
+                android:background="@drawable/rounded_corner"
+                android:paddingStart="@dimen/medium_left_right_gap"
+                android:paddingEnd="@dimen/medium_left_right_gap">
+
+                <TextView
+                    android:layout_height="fill_parent"
+                    android:layout_width="wrap_content"
+                    android:text="@string/total_profit_label"
+                    android:textColor="#000000"
+                    android:gravity="center_vertical"/>
+                <TextView
+                    android:id="@+id/total_profit_value"
+                    android:layout_height="fill_parent"
+                    android:layout_width="wrap_content"
+                    android:text="@string/init_indicator"
+                    android:textColor="#808080"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/medium_left_right_gap"
+                    android:paddingEnd="@dimen/medium_left_right_gap"/>
+
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/possible_transaction_points_setting_container"
+                android:layout_below="@+id/total_profit_info_container"
+                android:layout_width="fill_parent"
+                android:layout_height="281dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/medium_top_bottom_gap"
+                android:layout_marginRight="@dimen/medium_left_right_gap"
+                android:layout_marginLeft="@dimen/medium_left_right_gap"
+                android:background="@drawable/rounded_corner"
+                android:stretchColumns="*">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:paddingStart="@dimen/medium_left_right_gap"
+                    android:paddingEnd="@dimen/medium_left_right_gap">
+
+                    <TextView
+                        android:layout_height="fill_parent"
+                        android:layout_width="wrap_content"
+                        android:text="@string/transaction_points_setting_label"
+                        android:textColor="#000000"
+                        android:gravity="center_vertical"/>
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <TextView
+                            android:id="@+id/robot_check_transaction_condition_times"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:textColor="#8abd00"
+                            android:gravity="center_vertical"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/medium_left_right_gap"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/possible_transaction_points_setting_container_divider"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#f1f1f1"
+                    android:layout_marginTop="@dimen/small_top_bottom_gap"
+                    android:layout_marginBottom="@dimen/small_top_bottom_gap"/>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap"
+                    android:layout_marginTop="@dimen/small_top_bottom_gap">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/volume_for_1st_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/volume_for_2nd_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/volume_for_3rd_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/volume_for_4th_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/volume_for_5th_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap"
+                    android:layout_marginTop="@dimen/small_top_bottom_gap">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <CheckBox
+                            android:id="@+id/whether_can_process_transaction_on_1st_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <CheckBox
+                            android:id="@+id/whether_can_process_transaction_on_2nd_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <CheckBox
+                            android:id="@+id/whether_can_process_transaction_on_3rd_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <CheckBox
+                            android:id="@+id/whether_can_process_transaction_on_4th_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <CheckBox
+                            android:id="@+id/whether_can_process_transaction_on_5th_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap"
+                    android:layout_marginTop="@dimen/small_top_bottom_gap">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/first_transaction_point_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/second_transaction_point_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/third_transaction_point_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="@color/active_green"
+                            android:textStyle="bold"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/fourth_transaction_point_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/fifth_transaction_point_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <RadioGroup
+                    android:id="@+id/possible_transaction_points"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap"
+                    android:layout_marginTop="@dimen/small_top_bottom_gap">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+                        <RadioButton
+                            android:id="@+id/active_first_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_radio_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+                        <RadioButton
+                            android:id="@+id/active_second_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_radio_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+                        <RadioButton
+                            android:id="@+id/active_third_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_radio_checkbox"
+                            android:button="@null"
+                            android:checked="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+                        <RadioButton
+                            android:id="@+id/active_fourth_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_radio_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="fill_parent"
+                        android:gravity="center">
+                        <RadioButton
+                            android:id="@+id/active_fifth_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/custom_radio_checkbox"
+                            android:button="@null"/>
+                    </RelativeLayout>
+
+                </RadioGroup>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap"
+                    android:layout_marginTop="@dimen/small_top_bottom_gap">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.1"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@null"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/first_gap_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/second_gap_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/third_gap_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:id="@+id/fourth_gap_value"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@string/init_indicator"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.1"
+                        android:layout_height="30dp"
+                        android:gravity="center">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:text="@null"
+                            android:gravity="center"
+                            android:textColor="#000000"/>
+                    </RelativeLayout>
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/medium_left_right_gap"
+                    android:layout_marginRight="@dimen/medium_left_right_gap"
+                    android:layout_marginTop="@dimen/small_top_bottom_gap"
+                    android:layout_marginBottom="@dimen/small_top_bottom_gap">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/decrease_active_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/minus_1"
+                            android:background="@drawable/increase_decrease_button"
+                            android:contentDescription="@string/content_description"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:layout_height="wrap_content"
+                        android:gravity="center">
+
+                        <ImageButton
+                            android:id="@+id/increase_active_transaction_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/plus_1"
+                            android:background="@drawable/increase_decrease_button"
+                            android:contentDescription="@string/content_description"/>
+
+                    </RelativeLayout>
+
+                </TableRow>
+
+            </TableLayout>
+
+            <Button
+                android:id="@+id/confirm_start_robot"
+                android:layout_below="@+id/possible_transaction_points_setting_container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/start_robot"
+                android:textStyle="bold"
+                android:background="@drawable/custom_normal_confirm_button"
+                android:layout_marginStart="@dimen/medium_left_right_gap"
+                android:layout_marginEnd="@dimen/medium_left_right_gap"
+                android:layout_marginTop="@dimen/large_top_bottom_gap"/>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

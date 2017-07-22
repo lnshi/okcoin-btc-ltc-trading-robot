@@ -1,0 +1,16 @@
+<resources>
+    <!-- Values about distance -->
+    <dimen name="xlarge_left_right_gap">16dp</dimen>
+    <dimen name="large_left_right_gap">12dp</dimen>
+    <dimen name="medium_left_right_gap">8dp</dimen>
+    <dimen name="small_left_right_gap">4dp</dimen>
+
+    <dimen name="xlarge_top_bottom_gap">20dp</dimen>
+    <dimen name="large_top_bottom_gap">15dp</dimen>
+    <dimen name="medium_top_bottom_gap">10dp</dimen>
+    <dimen name="small_top_bottom_gap">5dp</dimen>
+
+    <!-- Values about font size -->
+    <dimen name="base_font_size">16sp</dimen>
+    <dimen name="max_font_size">20sp</dimen>
+</resources>

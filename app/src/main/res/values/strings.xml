@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">OKCoin Robot</string>
+    
+    <string name="content_description">I am a cute but poor cat</string>
+
+    <string name="rmb_sum_label">(¥)SUM:</string>
+    <string name="rmb_avl_label">(¥)AVL:</string>
+    <string name="rmb_frozen_label">(¥)FROZEN:</string>
+
+    <string name="btc_sum_label">(฿)SUM:</string>
+    <string name="btc_avl_label">(฿)AVL:</string>
+    <string name="btc_frozen_label">(฿)FROZEN:</string>
+
+    <string name="btc_current_price_label">CURRENT BTC PRICE(¥):</string>
+
+    <string name="total_profit_label">TOTAL PROFIT(¥):</string>
+
+    <string name="transaction_points_setting_label">TRANSACTION POINTS:</string>
+    
+    <string name="init_indicator">- - -</string>
+
+    <string name="increase_one">+1</string>
+    <string name="decrease_one">-1</string>
+
+    <string name="start_robot">START ROBOT</string>
+    <string name="stop_robot">STOP ROBOT</string>
+</resources>
