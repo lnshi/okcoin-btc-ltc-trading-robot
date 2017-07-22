@@ -6,7 +6,7 @@
 
   - Import it into your AndroidStudio;
 
-  - Set your OKCoin 'CN_API_KEY' and 'CN_API_SECRET' in this [Java Class](https://github.com/lnshi/okcoin-btc-ltc-trading-robot/blob/master/app/src/main/java/com/leonard/sg/okcoin/service/robot/constant/SyncConstants.java);
+  - Set your OKCoin `CN_API_KEY` and `CN_API_SECRET` in this [Java Class](https://github.com/lnshi/okcoin-btc-ltc-trading-robot/blob/master/app/src/main/java/com/leonard/sg/okcoin/service/robot/constant/SyncConstants.java);
 
   - Build the apk then install;
   
