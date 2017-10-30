@@ -1,6 +1,6 @@
 ## Description
 
-  - This is a trading robot for the BTC/LTC trading platform [OKCoin](www.okcoin.cn).
+  - This is a trading robot for the BTC/LTC trading platform [OKCoin.cn](https://www.okcoin.cn).
 
 ## How to use it
 
@@ -20,6 +20,6 @@
   
 ## NOTICE
 
-  - **This project got halted due to the unbearable super long transaction API request delay when tried to access [OKCoin](www.okcoin.cn) from outside of the China Mainland.**
+  - **This project get halted due to the unbearable super long transaction API request delay when tried to access [OKCoin](www.okcoin.cn) from outside of the China Mainland.**
 
 
