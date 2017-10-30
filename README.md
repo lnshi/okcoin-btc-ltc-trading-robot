@@ -20,6 +20,6 @@
   
 ## NOTICE
 
-  - **This project get halted due to the unbearable super long transaction API request delay when tried to access [OKCoin](www.okcoin.cn) from outside of the China Mainland.**
+  - **This project get halted due to the unbearable super long transaction API request delay when tried to access [OKCoin.cn](https://www.okcoin.cn) from outside of the China Mainland.**
 
 
